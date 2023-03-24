@@ -1,0 +1,101 @@
+body{
+    background-color: #F1F1F1;
+    padding: 0;
+}
+.content-body{
+    background-color: #F1F1F1;
+    color: white;
+    width: 100%;
+}
+
+.content1{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #2B2A30;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.content{
+    overflow: auto;
+    width:100%;
+    height: calc(100vh-150px);
+    background-color: white; 
+    color: black;
+    padding: 20px;
+    margin-bottom:20px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.pay{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    
+}
+p{
+    color: #D15F3B;
+}
+h4{
+    padding-top: 30px;
+}
+h3{
+    padding-top: 15px;
+}
+
+.items{
+    width: 80px;
+    height: 100px;
+}
+
+.items-content{
+    margin-top: 10px;
+    margin-bottom:10px ;
+    padding-top: 10px;
+    background-color: #F9F9F9;
+    border-radius: 20px;
+}
+
+
+
+.bt-i{
+   text-align: center;
+   margin-top: 2px;
+   margin-bottom: 2px;
+   padding-left:3px;
+   margin-right: 3px;
+}
+.foot{ 
+    margin-top: 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+.bt-buy{
+    background-color: #FF7B51;
+    padding: 10px;
+    border: none;
+    font-size: 30px;
+    border-radius: 15px;
+}
+/* arro control */
+
+.upArro{
+    width: 100%;
+   position: sticky;
+   top: 0;
+}
+.upArro{
+    text-align: center;
+}
+.downArro{
+    width: 100%;
+    position: sticky;
+    text-align: center;
+    bottom: 0;
+}

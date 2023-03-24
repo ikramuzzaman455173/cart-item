@@ -1,0 +1,54 @@
+<! DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> First page </title>
+
+        <script src="https://kit.fontawesome.com/f1e7026320.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./CSS/qrCode.css">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="text-center">
+                <img src="./Img/4.PNG" class="qr-code img-thumbnail img-responsive" />
+            </div>
+            <div>
+                <div>
+                    <label class="control-label col-sm-2" for="content">
+                        <h3><i class="fa-solid fa-location-crosshairs"></i></h3>
+                    </label>
+                    <select>
+                        <option value="">select your location</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Uttara">Uttara</option>
+                        <option value="khilkhet">khilkhet</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js">
+        </script>
+        <script>
+            function htmlEncode(value) {
+                return $('<div/>').text(value)
+                    .html();
+            }
+            $(function () {
+                $('#generate').click(function () {
+                    let finalURL =
+                        'https://chart.googleapis.com/chart?cht=qr&chl=' +
+                        htmlEncode($('#content').val()) +
+                        '&chs=160x160&chld=L|0'
+                    $('.qr-code').attr('src', finalURL);
+                });
+            });  
+        </script>
+    </body>
+
+    </html>
