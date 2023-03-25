@@ -51,11 +51,8 @@ function decreament(decre,pri,tot,itm,bg){
 function scrollUp() {
     // Get the first item in the container
     let container = document.getElementById("shopping-cart-container");
-    let firstItem = container.firstElementChild;
-    window.scrollTo({ behavior: 'smooth' })
 
-    // Scroll to the first item
-    firstItem.scrollIntoView({behavior: "smooth"});
+    container.scrollTo({ top:0,behavior: 'smooth' })
 
     // Hide the top button
     document.getElementById("upArro").style.display = "none";
@@ -64,6 +61,8 @@ function scrollUp() {
     document.getElementById("downArro").style.display = "block";
 
 }
+
+
 
 function scrollBottom() {
     // Get the last item in the container
