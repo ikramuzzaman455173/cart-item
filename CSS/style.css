@@ -1,6 +1,7 @@
 body{
     background-color: #F1F1F1;
     padding: 0;
+    overflow-x:hidden;
 }
 .content-body{
     background-color: #F1F1F1;
@@ -22,7 +23,7 @@ body{
     overflow: auto;
     width:100%;
     height: calc(100vh-150px);
-    background-color: white; 
+    background-color: white;
     color: black;
     padding: 20px;
     margin-bottom:20px;
@@ -36,7 +37,7 @@ body{
     width: 150px;
     height: 150px;
     text-align: center;
-    
+
 }
 p{
     color: #D15F3B;
@@ -70,7 +71,7 @@ h3{
    padding-left:3px;
    margin-right: 3px;
 }
-.foot{ 
+.foot{
     margin-top: 0px;
     padding: 20px;
     text-align: center;
@@ -84,7 +85,9 @@ h3{
     border-radius: 15px;
 }
 /* arro control */
-
+.upArro,.downArro{
+    cursor: pointer;
+}
 .upArro{
     width: 100%;
    position: sticky;

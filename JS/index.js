@@ -48,80 +48,36 @@ function decreament(decre,pri,tot,itm,bg){
 
 
 // Product Item Scroll Effect Add
+function scrollUp() {
+    // Get the first item in the container
+    let container = document.getElementById("shopping-cart-container");
+    let firstItem = container.firstElementChild;
+    window.scrollTo({ behavior: 'smooth' })
 
-// const cartContainer = document.querySelector('.shopping-cart-container');
+    // Scroll to the first item
+    firstItem.scrollIntoView({behavior: "smooth"});
 
-// // Get the "down" and "up" button elements
-// const downBtn = document.querySelector('#down-btn');
-// const upBtn = document.querySelector('#up-btn');
+    // Hide the top button
+    document.getElementById("upArro").style.display = "none";
 
-// // Define the amount to scroll per click (adjust this value as needed)
-// const scrollAmount = 100;
+    // Show the bottom button
+    document.getElementById("downArro").style.display = "block";
 
-// // Add a click event listener to the "down" button
-// downBtn.addEventListener('click', () => {
-//   // Scroll down by the defined amount
-//   cartContainer.scrollBy(0, scrollAmount);
-
-//   // Hide the last item in the cart
-//   const lastItem = cartContainer.lastElementChild;
-//   lastItem.style.display = 'none';
-// });
-
-// // Add a click event listener to the "up" button
-// upBtn.addEventListener('click', () => {
-//   // Scroll up by the defined amount
-//   cartContainer.scrollBy(0, -scrollAmount);
-
-//   // Hide the first item in the cart
-//   const firstItem = cartContainer.firstElementChild;
-//   firstItem.style.display = 'none';
-// });
-
-
-function scrollBottom() {
-    // // Get the last item in the container
-    // let container = document.getElementById("shopping-cart-container");
-    // let lastItem = container.lastElementChild;
-
-    // // Scroll to the last item
-    // lastItem.scrollIntoView({behavior: "smooth"});
-
-    // // Hide the bottom button
-    // document.getElementById("bottomBtn").style.display = "none";
-
-    // // Show the top button
-    // document.getElementById("topBtn").style.display = "block";
-    window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth"
-        });
 }
 
-function scrollUp() {
-    // // Get the first item in the container
-    // let container = document.getElementById("shopping-cart-container");
-    // let firstItem = container.firstElementChild;
-    // window.scrollTo({ behavior: 'smooth' })
+function scrollBottom() {
+    // Get the last item in the container
+    let container = document.getElementById("shopping-cart-container");
+    let lastItem = container.lastElementChild;
 
-    // // Scroll to the first item
-    // firstItem.scrollIntoView({behavior: "smooth"});
+    // Scroll to the last item
+    lastItem.scrollIntoView({behavior: "smooth"});
 
-    // // Hide the top button
-    // document.getElementById("topBtn").style.display = "none";
+    // Hide the bottom button
+    document.getElementById("downArro").style.display = "none";
 
-    // // Show the bottom button
-    // document.getElementById("bottomBtn").style.display = "block";
-    // // window.scrollTo({ top: 0, behavior: 'smooth' })
-    // // document.documentElement.scrollTop = 0;
-    // // document.body.scrollTop = 0;
-
-
-    window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-        });
+    // Show the top button
+    document.getElementById("upArro").style.display = "block";
 
 }
 
